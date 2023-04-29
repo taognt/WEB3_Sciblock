@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "511d733f-45f2-439d-b342-6764c0856234",
+		"name": "PIE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26319367"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"flo.flo@flo.fr\",\r\n    \"password\": \"teste\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"Flo\",\r\n    \"lastname\": \"Flo 2\",\r\n    \"email\": \"flo.flo@flo.fr\",\r\n    \"password\": \"teste\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Doc",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTGVvbmFyZG8gUGljb2xpIiwiZW1haWwiOiJsZW9uYXJkby5waWNvbGlAZW5zdGEtcGFyaXMuZnIiLCJpYXQiOjE2ODA4NzQ2NTQsImV4cCI6MTY4MDg3ODI1NH0.uluUlsCcvIJyGXZw9gGbhtCfhGS8_o0F56Yb4OxzBFM",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pdf",
+							"type": "file",
+							"src": "/C:/Users/lgpic/Downloads/README.pdf"
+						},
+						{
+							"key": "authors[]",
+							"value": "Leonardo",
+							"type": "text"
+						},
+						{
+							"key": "authors[]",
+							"value": "Andrezao",
+							"type": "text"
+						},
+						{
+							"key": "keywords[]",
+							"value": "Keyword 1",
+							"type": "text"
+						},
+						{
+							"key": "keywords[]",
+							"value": "Keyword 2",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Name of article",
+							"type": "text"
+						},
+						{
+							"key": "abstract",
+							"value": "Abstract: Lorem ipsum dolor sit amet",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/doc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"doc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Doc by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/doc/64396934806a9707aceac235",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"doc",
+						"64396934806a9707aceac235"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Docs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/doc/?keywords=Keyword 1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"doc",
+						""
+					],
+					"query": [
+						{
+							"key": "keywords",
+							"value": "Keyword 1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Doc PDF by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/doc/pdf/64396934806a9707aceac235",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"doc",
+						"pdf",
+						"64396934806a9707aceac235"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

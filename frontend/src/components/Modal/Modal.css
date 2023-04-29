@@ -1,0 +1,72 @@
+.modalPub-layer{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.33);
+
+    position: absolute;
+}
+
+.modalPub-container{
+    width: 400px;
+    min-height: 230px;
+    position: fixed;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: #f5f5f5;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    gap: 20px;
+
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+
+    z-index: 1000;
+}
+
+.modalPub-container > span{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Archivo Narrow', sans-serif;
+    text-align: center;
+}
+
+.modalPub-link{
+    min-width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+    border: none;
+    padding: 0px 10px;
+
+    font-size: 20px;
+
+    background-color: #03144cff;
+    color: #f5f5f5;
+
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+.modalPub-ul{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    height: 100%;
+    gap: 10px;
+    margin: 10px 0px;
+}
